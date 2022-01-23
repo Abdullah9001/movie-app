@@ -60,13 +60,14 @@ export default {
       movie: '',
     };
   },
+
   methods: {
     async getSingleMovie() {
       const data = axios.get(
         `https://api.themoviedb.org/3/movie/${this.$route.params.movieid}?api_key=59658120fddc102bf15e244d6e26d77a&language=en-US`
       );
-      const result = await data;
-      this.movie = result.data;
+       const result = await data;
+      this.movie = result.data; 
     },
   },
 };
